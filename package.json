@@ -1,0 +1,44 @@
+{
+  "name": "jec-tool-cli",
+  "version": "1.0.0",
+  "description": "JEC TOOL CLI - Provides common APIs for all JEC Command Line Interface utilities.",
+  "main": "dist/com/jec/tool/jec-tool-cli-index",
+  "types": "types/jec-tool-cli.d.ts",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jec-project/jec-tool-cli.git"
+  },
+  "keywords": [
+    "JEC",
+    "CLI",
+    "tools",
+    "JavaScript",
+    "TypeScript",
+    "server",
+    "applications"
+  ],
+  "author": "Pascal ECHEMANN",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/jec-project/jec-tool-cli/issues"
+  },
+  "homepage": "https://github.com/jec-project/jec-tool-cli#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^8.0.13",
+    "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "grunt-ts": "^6.0.0-beta.17",
+    "grunt-typedoc": "^0.2.4",
+    "mocha": "^3.4.2",
+    "typedoc": "^0.8.0",
+    "typescript": "^2.6.2"
+  }
+}
