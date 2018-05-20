@@ -26,7 +26,9 @@
     "url": "https://github.com/jec-project/jec-tool-cli/issues"
   },
   "homepage": "https://github.com/jec-project/jec-tool-cli#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
   "devDependencies": {
     "@types/node": "^8.0.13",
     "chai": "^3.5.0",

@@ -12,4 +12,9 @@
  * Please maintain package and alphabetical order!
  */
 
- //--> com/jec/tool/cli/command
+//--> com/jec/tool/cli/cmd
+export {Command} from "./cli/cmd/Command";
+//--> com/jec/tool/cli/logging/impl
+export {ConsoleCliLogger} from "./cli/logging/impl/ConsoleCliLogger";
+//--> com/jec/tool/cli/logging
+export {CliLogger} from "./cli/logging/CliLogger";
