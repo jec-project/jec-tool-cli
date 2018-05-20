@@ -20,3 +20,5 @@ var OptionConfigBuilder_1 = require("./cli/util/OptionConfigBuilder");
 exports.OptionConfigBuilder = OptionConfigBuilder_1.OptionConfigBuilder;
 var OptionParser_1 = require("./cli/util/OptionParser");
 exports.OptionParser = OptionParser_1.OptionParser;
+var SplashScreenBuilder_1 = require("./cli/util/SplashScreenBuilder");
+exports.SplashScreenBuilder = SplashScreenBuilder_1.SplashScreenBuilder;

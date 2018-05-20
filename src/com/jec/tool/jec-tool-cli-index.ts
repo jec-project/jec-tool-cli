@@ -32,3 +32,4 @@ export {ConfigParser} from "./cli/util/ConfigParser";
 export {OptionConfig} from "./cli/util/OptionConfig";
 export {OptionConfigBuilder} from "./cli/util/OptionConfigBuilder";
 export {OptionParser} from "./cli/util/OptionParser";
+export {SplashScreenBuilder} from "./cli/util/SplashScreenBuilder";

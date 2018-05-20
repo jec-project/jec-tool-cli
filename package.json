@@ -28,6 +28,7 @@
   "homepage": "https://github.com/jec-project/jec-tool-cli#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "figlet": "^1.2.0",
     "minimist": "^1.2.0",
     "update-notifier": "^2.5.0"
   },

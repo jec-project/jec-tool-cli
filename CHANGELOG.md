@@ -9,6 +9,8 @@
 
 ### Features
 
+- Adding the SplashScreenBuilder class
+
 <a name="jec-tool-cli-1.0.0"></a>
 ## **1.0.0** (2018-05-20)
 
