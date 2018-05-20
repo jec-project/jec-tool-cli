@@ -18,9 +18,6 @@ import * as updateNotifier from "update-notifier";
 import {CommandManager} from "./CommandManager";
 import {CommandStrategy} from "./strategy/CommandStrategy";
 
-// Package file:
-const PKG:any = require("../../package.json");
-
 /**
  * <code>AbstractCommandManager</code> is the abstract class for the 
  * <code>CommandManager</code> interface.
@@ -34,10 +31,11 @@ export abstract class AbstractCommandManager implements CommandManager {
   /**
    * Creates a new <code>AbstractCommandManager</code> instance.
    * 
-   * @param {string} processTitle the name of the current process.
+   * @param processTitle the name of the current process.
+   * @param pkgPath the full path to the <code>package.json</code> file.
    */
-  constructor(processTitle:string) {
-    this.initObj(processTitle);
+  constructor(processTitle:string, pkgPath:string) {
+    this.initObj(processTitle, pkgPath);
   }
   
   //////////////////////////////////////////////////////////////////////////////
@@ -62,9 +60,11 @@ export abstract class AbstractCommandManager implements CommandManager {
   /**
    * Initialises this object. This method is called by the constructor function.
    * 
-   * @param {string} processTitle the name of the current process.
+   * @param processTitle the name of the current process.
+   * @param pkgPath the full path to the <code>package.json</code> file.
    */
-  private initObj(processTitle:string):void {
+  private initObj(processTitle:string, pkgPath:string):void {
+    const PKG:any = require(pkgPath);
     updateNotifier({ pkg:PKG }).notify();
     process.title = processTitle;
     this.__version = PKG.version;

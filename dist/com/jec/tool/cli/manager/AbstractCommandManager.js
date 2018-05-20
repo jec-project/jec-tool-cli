@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const updateNotifier = require("update-notifier");
-const PKG = require("../../package.json");
 class AbstractCommandManager {
-    constructor(processTitle) {
+    constructor(processTitle, pkgPath) {
         this.__strategy = null;
         this.__version = null;
-        this.initObj(processTitle);
+        this.initObj(processTitle, pkgPath);
     }
-    initObj(processTitle) {
+    initObj(processTitle, pkgPath) {
+        const PKG = require(pkgPath);
         updateNotifier({ pkg: PKG }).notify();
         process.title = processTitle;
         this.__version = PKG.version;
