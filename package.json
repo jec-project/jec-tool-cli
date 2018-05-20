@@ -2,7 +2,7 @@
   "name": "jec-tool-cli",
   "version": "1.0.0",
   "description": "JEC TOOL CLI - Provides common APIs for all JEC Command Line Interface utilities.",
-  "main": "dist/com/jec/tool/jec-tool-cli-index",
+  "main": "dist/com/jec/tool/cli/jec-tool-cli-index",
   "types": "types/jec-tool-cli.d.ts",
   "scripts": {
     "test": "mocha --recursive"
@@ -27,7 +27,9 @@
   },
   "homepage": "https://github.com/jec-project/jec-tool-cli#readme",
   "dependencies": {
-    "chalk": "^2.4.1"
+    "chalk": "^2.4.1",
+    "minimist": "^1.2.0",
+    "update-notifier": "^2.5.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.13",
