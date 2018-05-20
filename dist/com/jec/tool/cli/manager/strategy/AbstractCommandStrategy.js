@@ -7,6 +7,7 @@ const HelpManager_1 = require("../HelpManager");
 const ConsoleCliLogger_1 = require("../../logging/impl/ConsoleCliLogger");
 class AbstractCommandStrategy {
     constructor(version) {
+        this._scriptPath = null;
         this.__argv = null;
         this.__version = null;
         this.__commands = null;
@@ -52,6 +53,12 @@ class AbstractCommandStrategy {
             this.__commands.set(cmd.alias, cmd);
         }
     }
+    getScriptsPath() {
+        return this._scriptPath;
+    }
+    setScriptPath(path) {
+        this._scriptPath = path;
+    }
     invokeCommand() {
         const commandName = this.__argv._[0];
         const cmd = this.__commands.get(commandName.toLowerCase());
@@ -61,7 +68,7 @@ class AbstractCommandStrategy {
             }
             else {
                 if (this.checkOptions(cmd, this.__argv)) {
-                    const module = require(path.join("../../scripts", cmd.action));
+                    const module = require(path.join(this._scriptPath, cmd.action));
                     module.run(this.__argv);
                 }
             }

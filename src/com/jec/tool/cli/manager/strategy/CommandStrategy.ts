@@ -29,4 +29,18 @@ export interface CommandStrategy {
    * Invokes the command to run depending on the current user's input.
    */
   invokeCommand():void;
+
+  /**
+   * Returns the path used to load script files.
+   * 
+   * @return the path used to load script files.
+   */
+  getScriptsPath():string;
+
+  /**
+   * Sets the path used to load script files.
+   * 
+   * @param path the path used to load script files.
+   */
+  setScriptPath(path:string):void;
 }

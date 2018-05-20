@@ -42,7 +42,16 @@ export abstract class AbstractCommandStrategy implements CommandStrategy {
   constructor(version:string) {
     this.initObj(version);
   }
-  
+
+  //////////////////////////////////////////////////////////////////////////////
+  // Private properties
+  //////////////////////////////////////////////////////////////////////////////
+
+  /**
+   * The path to the scripts.
+   */
+  private _scriptPath:string = null;
+
   //////////////////////////////////////////////////////////////////////////////
   // Protected properties
   //////////////////////////////////////////////////////////////////////////////
@@ -146,6 +155,20 @@ export abstract class AbstractCommandStrategy implements CommandStrategy {
   /**
    * @inheritDoc
    */
+  public getScriptsPath():string {
+    return this._scriptPath;
+  }
+
+  /**
+   * @inheritDoc
+   */
+  public setScriptPath(path:string):void {
+    this._scriptPath = path;
+  }
+
+  /**
+   * @inheritDoc
+   */
   public invokeCommand():void {
     const commandName:string = this.__argv._[0];
     const cmd:CommandConfig = this.__commands.get(commandName.toLowerCase());
@@ -155,7 +178,7 @@ export abstract class AbstractCommandStrategy implements CommandStrategy {
       } else {
         if(this.checkOptions(cmd, this.__argv)) {
           const module:any = require(
-            path.join("../../scripts", cmd.action)
+            path.join(this._scriptPath, cmd.action)
           );
           module.run(this.__argv);
         }
