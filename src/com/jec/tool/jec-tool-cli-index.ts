@@ -18,3 +18,5 @@ export {Command} from "./cli/cmd/Command";
 export {ConsoleCliLogger} from "./cli/logging/impl/ConsoleCliLogger";
 //--> com/jec/tool/cli/logging
 export {CliLogger} from "./cli/logging/CliLogger";
+//--> com/jec/tool/cli/manager
+export {CommandManager} from "./cli/manager/CommandManager";
