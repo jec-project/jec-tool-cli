@@ -62,5 +62,3 @@ test/**/*.js
 
 # Ignore JavaScript files in utils folder
 utils/**/*.js
-
-package-lock.json

@@ -1,5 +1,9 @@
 # JEC TOOL CLI Project
 
+[![JEC version](https://img.shields.io/badge/JEC-1.0-%23ba00ff.svg)](http://jecproject.org)
+[![npm version](https://badge.fury.io/js/jec-tool-cli.svg)](https://www.npmjs.com/package/jec-tool-cli)
+[![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 JEC TOOL CLI  is a [JavaScript Enterprise Container][jec-url] utilities module that provides common APIs for all JEC Command Line Interface utilities.
 
 [![][jec-logo]][jec-url]
@@ -49,7 +53,7 @@ The documentation generator is [TypeDoc](http://typedoc.org/)
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.1](CHANGELOG.md#jec-tool-cli-1.0.1)
+**Current stable release:** [1.0.2](CHANGELOG.md#jec-tool-cli-1.0.2)
  
 For a complete listing of release notes for all JEC TOOL CLI update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 
